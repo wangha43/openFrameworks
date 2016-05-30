@@ -434,7 +434,7 @@ class ofLog{
 		/// \returns A reference to itself.
 		template <class T> 
 			ofLog& operator<<(const T& value){
-			message << value << getPadding();
+			message << value << padding;
 			return *this;
 		}
 	
@@ -486,7 +486,7 @@ class ofLog{
 		ofLog(ofLog const&) {}        					// not defined, not copyable
 		ofLog& operator=(ofLog& from) {return *this;}	// not defined, not assignable
 		
-		static string & getPadding(); ///< The padding between std::ostream calls.
+		static string padding; ///< The padding between std::ostream calls.
 };
 
 
